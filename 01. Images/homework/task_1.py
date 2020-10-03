@@ -33,7 +33,7 @@ def find_way_from_maze(image: np.ndarray) -> tuple:
     is_end = False
     route[start[0], start[1]] = 1 # Присвоим стартовой точке стартовое значение
     # Процесс распростанения волны, пока не конец или волна может расспространятся
-    while not is_end or can:
+    while not is_end and can:
         # Находим ячейки с текущим значением
         x,y = np.where(route == curr)
         curr = curr + 1
