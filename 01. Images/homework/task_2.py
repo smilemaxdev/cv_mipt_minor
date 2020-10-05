@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-def find_roads(image: np.ndarray) -> tuple:
+def find_ranges(image: np.ndarray) -> tuple:
     
     """
     Функция определяющая количество и диапозон дорожек по характерному цвету разделителей
@@ -34,7 +34,7 @@ def find_road_number(image: np.ndarray) -> int:
     :param image: исходное изображение
     :return: номер дороги, на котором нет препятсвия на дороге
     """
-    start, end = find_roads(image)   # Найдем количество и диапозон дорожек
+    start, end = find_ranges(image)   # Найдем количество и диапозон дорожек
     
     road_number = None
     
